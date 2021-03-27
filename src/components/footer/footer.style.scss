@@ -1,0 +1,53 @@
+$color-grey-light: rgb(206, 205, 205); 
+$color-black: rgb(8, 8, 8);
+
+.footer {
+    font-size: 1.6rem;
+    font-weight: 200;
+    text-align: center;
+    padding: 4rem;
+    background-color: $color-black;
+    color: $color-grey-light;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+
+    &__about, &__contact, &__service {
+        flex-grow: 1;
+        display: block;
+        max-width: 30%;
+        line-height: 1.2;
+        padding: 0;
+    }
+
+    &__title {
+        font-weight: 500;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    &__text {
+        text-transform: capitalize;
+
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__item {
+        margin-bottom: 1rem !important;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-grey-light;
+    }
+
+}
+
+

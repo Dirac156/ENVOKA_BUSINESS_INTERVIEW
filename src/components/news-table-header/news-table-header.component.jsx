@@ -4,7 +4,10 @@ import "./news-table-header.style.scss";
 
 const NewsTableHeader = () => (
     <div className= "table-header">
-        I am the header of the table
+        <span>source id</span> 
+        <span> source name</span>
+        <span> author </span> 
+        <span>publishedAt</span>
     </div>
 );
 

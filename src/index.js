@@ -6,6 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter } from "react-router-dom"; 
 
+import dotenv from "dotenv";
+dotenv.config()
+
+
+
 ReactDOM.render(
   <BrowserRouter>
     <App />

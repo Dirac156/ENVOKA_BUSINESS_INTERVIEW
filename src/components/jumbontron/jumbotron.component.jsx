@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookReader } from '@fortawesome/free-solid-svg-icons';
 
+import "aos/dist/aos.css";
 import "./jumbotron.styles.scss";
 
 class Jumbotron extends Component {
@@ -45,12 +47,12 @@ class Jumbotron extends Component {
     render() {
         return (
         
-            <div className="jumbotron">
+            <div data-aos="fade-in" className="jumbotron">
                 <div className="jumbotron__message">
                     { this.state.printed_message }
                 </div>
 
-                <div className="jumbotron__message-delayed">
+                <div data-aos="fade-up"className="jumbotron__message-delayed">
                     <p className="jumbotron__message-delayed--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Nam vel erat vel nisi porttitor ultrices vel sit amet metus.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -58,7 +60,7 @@ class Jumbotron extends Component {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     </p>
 
-                    <FontAwesomeIcon icon={ faBookReader } size="5x" style={{color: "white"}}/>
+                    <FontAwesomeIcon icon={ faBookReader } size="5x"/>
                     
                 </div>            
         </div>)

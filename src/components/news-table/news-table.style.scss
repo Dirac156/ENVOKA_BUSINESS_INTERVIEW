@@ -1,0 +1,25 @@
+@import "../../scss/responsive_breakpoint";
+
+#newstable {
+    text-align: center;
+}
+.table {
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+    border-collapse: collapse;
+
+    &__pagination {
+        display: inline-block;
+        margin: 1rem;
+    }
+
+    &__row {
+        &:nth-child(odd){background-color: rgb(228, 224, 224);}
+    }
+
+    @include respond-to('medium') {
+        overflow-x: auto;
+    }
+}

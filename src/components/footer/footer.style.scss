@@ -1,11 +1,11 @@
-$color-grey-light: rgb(206, 205, 205); 
-$color-black: rgb(8, 8, 8);
+@import "../../scss/variables";
+@import "../../scss/responsive_breakpoint";
 
 .footer {
     font-size: 1.6rem;
     font-weight: 200;
     text-align: center;
-    padding: 4rem;
+    padding: $default-padding;
     background-color: $color-black;
     color: $color-grey-light;
 
@@ -44,9 +44,69 @@ $color-black: rgb(8, 8, 8);
     }
 
     &__link {
-        text-decoration: none;
-        color: $color-grey-light;
+        &,
+        &:visited {
+            text-decoration: none;
+            color: $color-grey-light;
+            cursor: pointer;
+            transition: all .2s;
+        } 
+        &:hover,
+        &:active {
+            text-decoration: none;
+            color: $color-grey-light;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
     }
+
+
+    // @include respond-to('medium') {
+    //     text-align: center;
+    //     display: flex;
+    //     flex-flow: row wrap;
+
+    //     font-size: 1.4rem;
+
+    //     &__about, &__service, &__contact {
+    //         flex-grow: 1;
+    //         display: block;
+    //         line-height: 1.2;
+    //         padding: 0;
+    //         margin-bottom: 2rem;
+    //     }
+
+    //     &__about, &__service {
+    //         width: 50%;
+    //     }
+
+    //     &__contact {
+    //         width: 100vw;
+            
+    //     }
+    // }
+
+
+    @include respond-to('small') {
+        text-align: center;
+        display: flex;
+        flex-flow: column nowrap;
+
+        font-size: 1.4rem;
+
+        &__about, &__contact, &__service {
+            flex-grow: 1;
+            display: block;
+            max-width: 100%;
+            line-height: 1;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    
 
 }
 

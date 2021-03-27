@@ -1,7 +1,9 @@
 import React from "react";
 
 import styled from "styled-components";
+import CopyRight from "../copyright/copyright.component";
 
+import "aos/dist/aos.css";
 import "./footer.style.scss";
 
 const ListItemMargined = styled.li` 
@@ -11,7 +13,8 @@ const ListItemMargined = styled.li`
 `
 
 const Footer = () => (
-    <div className="footer">
+    <footer className="footer">
+    <div data-aos="fade-up" className="footer">
         <div className="footer__about">
             <h2 className="footer__title">About us</h2>
             <p className="footer__text">
@@ -44,7 +47,10 @@ const Footer = () => (
                 </ListItemMargined>
             </ul>
         </div>
+
+        <CopyRight />
     </div>
+    </footer>
 );
 
 

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import axios from "axios";
+
 import NewsTableHeader from "../news-table-header/news-table-header.component";
 import NewsTableRow from "../news-table-row/news-table-row.component";
 
@@ -43,8 +45,8 @@ class NewsTable extends Component {
     
 
     componentDidMount() {
-        fetch(`https://newsapi.org/v2/everything?q=bitcoin&apiKey=${REACT_APP_NEWS_API_KEY}`)
-        .then(response => response.json())
+        axios.get(`https://newsapi.org/v2/everything?q=bitcoin&apiKey=${REACT_APP_NEWS_API_KEY}`)
+        .then(response => response.data)
         .then(news => this.setState({ news : news.articles}))
         .then(() => this.handlePageChangeData(1));
 
